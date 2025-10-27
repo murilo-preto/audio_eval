@@ -1,17 +1,203 @@
 <!doctype html>
-<title>Hello from Flask</title>
-  <h1>Avaliação de percepção de áudio</h1>
-    <h2>UFABC -- Codificação de Sinais Multimídia</h2>
-    <h2>Integrantes do grupo:</h2>
-      <ul>
-        <li>Murilo Preto, 11202130882</li>
-        <li>Murilo Alves, 11202130884</li>
-        <li>João, 11</li>
-      </ul>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Teste de percepção de codecs</title>
+  </head>
 
+<body>
+    <h1>Avaliação de percepção de áudio</h1>
+      <h2>Instruções:</h2>
+        <p>Esse procedimento de percepção de áudio faz uso de uma simplificação do método <a href="https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1534-3-201510-I!!PDF-E.pdf">MUSHRA</a>. Os principais pontos que você deve observar ao realizar o teste são:</p>
+          <ul>
+            <li>Você deve dar uma <em>nota pra qualidade do áudio de 0 a 100</em> usando a barra deslizante de cada um;</li>
+            <li>O primeiro áudio -- áudio de referência -- possui qualidade máxima. Use ele para comparar com os outros áudios;</li>
+            <li>Os outros áudios estão em ordem aleatória;</li>
+            <li>Você é encorajado a comparar os áudios entre eles para determinar qual é melhor e dar a nota de acordo;</li>
+            <li>Esteja atento para identificar ruídos e artefatos nos aúdios;</li>
+          </ul>
 
-    <h2>Análise de áudio:</h2>
-    <audio controls>
-        <source src="/audio/sample.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+        <p>Obrigado pela participação. Bom teste!</p>
+
+      <h2>Análise de áudio:</h2>
+
+      <div class="audio-container">
+        <h3>Áudio referência:</h3>
+          <p>Esse áudio é o original com qualidade máxima, escute ele sempre que necessário para comparar com os outros arquivos de áudio fornecidos.</p>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <p>Ajuste o slider para que o valor desse áudio seja 100:</p>
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 1:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 2:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 3:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 4:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 5:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 6:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 7:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 8:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+      <div class="audio-container">
+        <h3>Áudio 9:</h3>
+
+          <audio controls>
+              <source src="/audio/sample.mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>     
+
+          <div class="slider-group">
+            <label>Nota: <span class="slider-value">50</span></label>
+            <input type="range" class="slider" min="0" max="100" value="50">
+          </div>
+      </div>
+
+  <button id="submitBtn">Enviar respostas</button>
+
+  <script>
+    const sliders = document.querySelectorAll('.slider');
+
+    sliders.forEach(slider => {
+      const valueDisplay = slider.previousElementSibling.querySelector('.slider-value');
+      valueDisplay.textContent = slider.value;
+
+      slider.addEventListener('input', () => {
+        valueDisplay.textContent = slider.value;
+      });
+    });
+
+    document.getElementById('submitBtn').addEventListener('click', () => {
+      const values = Array.from(sliders).map((slider, index) => ({
+        id: index + 1,
+        value: slider.value
+      }));
+      console.log("Valores dos sliders:", values);
+    });
+  </script>
+
+</body>
+
+  <footer>
+  <p>© 2025 UFABC - Codificação de Sinais Multimídia</p>
+  <p>Desenvolvido pelo grupo de alunos:</p>
+  <ul class="footer-list">
+    <li>Murilo Preto, 11202130882</li>
+    <li>Murilo Alves, 11202130884</li>
+    <li>João, 11</li>
+  </ul>
+</footer>
+
+</html>
