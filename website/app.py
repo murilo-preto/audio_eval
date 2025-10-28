@@ -1,5 +1,6 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request, jsonify
 import os
+from sql_functions import inserir_test
 
 app = Flask(__name__)
 
@@ -27,3 +28,13 @@ def index():
 @app.route('/hello/<name>')
 def hello(name=None):
     return render_template('hello.html', person=name)
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    data = request.get_json()
+    print("Dados recebidos:", data)
+
+    inserir_test(data)
+
+    return jsonify({"status": "sucesso", "mensagem": "Dados recebidos com sucesso!"})
+

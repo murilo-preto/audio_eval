@@ -197,11 +197,52 @@
     });
 
     document.getElementById('submitBtn').addEventListener('click', () => {
-      const values = Array.from(sliders).map((slider, index) => ({
-        id: index + 1,
-        value: slider.value
-      }));
-      console.log("Valores dos sliders:", values);
+      // Captura os dados do participante
+      const initials = document.getElementById('initials').value;
+      const idade = parseInt(document.getElementById('age').value);
+      const profession = document.getElementById('profession').value;
+      const created_at = document.getElementById('date').value;
+
+      // Captura os valores dos sliders e monta as notas
+      const notas = {};
+      sliders.forEach((slider, index) => {
+        notas[`nota_${index}`] = parseInt(slider.value);
+      });
+
+      // Monta o dicionário final
+      const dados = {
+        initials: initials,
+        idade: idade,
+        profession: profession,
+        created_at: created_at,
+        ...notas
+      };
+
+      console.log("Dicionário formatado para o servidor:", dados);
+
+      fetch('/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(dados)
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Resposta do servidor:", data);
+          alert("Respostas enviadas com sucesso!");
+        })
+        .catch(error => {
+          console.error("Erro ao enviar dados:", error);
+          alert("Erro ao enviar os dados.");
+      });
+
+      // Aqui você pode enviar com fetch, se quiser:
+      // fetch('/seu-endpoint', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(dados)
+      // });
     });
   </script>
 
